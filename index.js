@@ -11,13 +11,15 @@ getJson()
     body.innerHTML = `
         <h1>${data.titel}</h1>
         <p>${data.omschrijving}</p>
-        <ul></ul>
         <img src="${data.afbeelding}" alt="">
     `
 
+    const ul = document.createElement("ul")
+    body.appendChild(ul)
+
     data.technology.forEach(elm => {
-        const li = document.createElement('li')
+        const li = document.createElement("li")
         li.innerHTML = elm
-        li.appendChild(ul)       
+        ul.appendChild(li)
     });
 })
