@@ -12,14 +12,15 @@ getJson()
         <h1>${data.titel}</h1>
         <p>${data.omschrijving}</p>
         <img src="${data.afbeelding}" alt="">
+        <h2>skills</h2>
     `
 
     const ul = document.createElement("ul")
     body.appendChild(ul)
 
     data.technology.forEach(elm => {
-        const li = document.createElement("li")
-        li.innerHTML = elm
+        const div = document.createElement("div")
+        div.innerHTML = elm
         ul.appendChild(li)
     });
 })
