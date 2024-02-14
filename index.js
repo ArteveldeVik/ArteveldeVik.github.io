@@ -17,8 +17,11 @@ getJson()
     p.innerHTML = data.omschrijving
     img.innerHTML = data.afbeelding
 
-    body.appendChild(h1, p, ul, img)
-    
+    body.appendChild(h1)
+    body.appendChild(p)
+    body.appendChild(ul)
+    body.appendChild(img)
+
     data.technology.forEach(elm => {
         const li = document.createElement('li')
         li.innerHTML = elm
