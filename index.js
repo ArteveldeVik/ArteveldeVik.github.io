@@ -21,6 +21,6 @@ getJson()
     data.technology.forEach(elm => {
         const div = document.createElement("div")
         div.innerHTML = elm
-        ul.appendChild(li)
+        ul.appendChild(div)
     });
 })
