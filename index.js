@@ -8,19 +8,12 @@ const getJson = async () => {
 
 getJson()
 .then((data) => {
-    const h1 = document.createElement("h1")
-    const p = document.createElement("p")
-    const ul = document.createElement("ul")
-    const img = document.createElement("img")
-
-    h1.innerHTML = data.titel
-    p.innerHTML = data.omschrijving
-    img.innerHTML = data.afbeelding
-
-    body.appendChild(h1)
-    body.appendChild(p)
-    body.appendChild(ul)
-    body.appendChild(img)
+    body.innerHTML = `
+        <h1>${data.titel}</h1>
+        <p>${data.omschrijving}</p>
+        <ul></ul>
+        <img src="${data.afbeelding}" alt="">
+    `
 
     data.technology.forEach(elm => {
         const li = document.createElement('li')
