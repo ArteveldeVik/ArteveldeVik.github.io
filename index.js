@@ -1,4 +1,4 @@
-const body = document.querySelector('body')
+const main = document.querySelector('main')
 
 const getJson = async () => {
     const url = await fetch("index.json")
@@ -8,7 +8,7 @@ const getJson = async () => {
 
 getJson()
 .then((data) => {
-    body.innerHTML = `
+    main.innerHTML = `
         <h1>${data.titel}</h1>
         <p>${data.omschrijving}</p>
         <img src="${data.afbeelding}" alt="">
@@ -16,7 +16,7 @@ getJson()
     `
 
     const ul = document.createElement("ul")
-    body.appendChild(ul)
+    main.appendChild(ul)
 
     data.technology.forEach(elm => {
         const div = document.createElement("div")
